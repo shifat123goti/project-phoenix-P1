@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Phoenix Admin</title><link rel="stylesheet" href="style.css">
+</head><body>
+<aside class="sidebar"><h2>🐦‍🔥 PHOENIX</h2>
+<nav>
+<button data-page="dashboard">📊 Dashboard</button><button data-page="users">👥 Users</button>
+<button data-page="rewards">🎁 Rewards</button><button data-page="missions">🎯 Missions</button>
+<button data-page="referrals">🔗 Referrals</button><button data-page="settings">⚙️ Settings</button>
+</nav><button id="logout">🚪 Logout</button></aside>
+<main><header><button id="menu">☰</button><div><h1 id="title">Dashboard</h1><p>Project Phoenix Control Center</p></div><b>👑 <span id="adminNameTop">Administrator</span></b></header>
+
+<section id="dashboard" class="page active"><div class="hero"><div><small>🔥 PHOENIX ADMIN</small><h2>Welcome back, Admin!</h2><p>Manage your Phoenix ecosystem.</p></div><strong>🐦‍🔥</strong></div>
+<div class="stats"><div>👥<small>Users</small><b id="usersCount">0</b></div><div>🪙<small>Coins</small><b id="coinsCount">0</b></div><div>🎁<small>Rewards</small><b id="rewardsCount">0</b></div><div>🔗<small>Referrals</small><b id="refsCount">0</b></div></div>
+<div class="panel"><h3>System Status</h3><p>🟢 Backend — Online</p><p>🟢 Database — Connected</p><p>🟢 API — Operational</p></div></section>
+
+<section id="users" class="page"><h2>👥 User Management</h2><div class="panel"><button id="addUser">➕ Add User</button><div class="table"><table><thead><tr><th>Player</th><th>Level</th><th>Coins</th><th>XP</th><th>Action</th></tr></thead><tbody id="userTable"></tbody></table></div></div></section>
+
+<section id="rewards" class="page"><h2>🎁 Reward Management</h2><div class="cards"><div class="panel"><h3>🪙 Give Coins</h3><p>Add coins to a player.</p><button id="giveCoins">Give Coins</button></div><div class="panel"><h3>🎁 Create Reward</h3><p>Create a reward entry.</p><button id="reward">Create Reward</button></div></div></section>
+
+<section id="missions" class="page"><h2>🎯 Mission Management</h2><button id="addMission">➕ Add Mission</button><div id="missionsList"></div></section>
+
+<section id="referrals" class="page"><h2>🔗 Referral Management</h2><div class="stats"><div>👥<small>Referrals</small><b id="refCount">0</b></div><div>🪙<small>Referral Coins</small><b id="refCoins">0</b></div></div></section>
+
+<section id="settings" class="page"><h2>⚙️ Settings</h2><div class="panel settings"><label>Admin Name<input id="adminName" value="Administrator"></label><label>API URL<input id="apiUrl" value="http://localhost:3000"></label><button id="save">💾 Save Settings</button></div></section>
+</main><div id="toast"></div><script src="admin.js"></script></body></html>
